@@ -1,0 +1,221 @@
+body {
+        margin:0; 
+        padding:0; 
+        font-family: sans-serif; 
+        font-size: 14px
+    }
+    #map { 
+        position:absolute; top:0; bottom:0; left: 220px; width: 100%;
+        width: -webkit-calc(100% - 220px);
+        width:    -moz-calc(100% - 220px);
+        width:         calc(100% - 220px);
+    }
+
+    li {
+      padding: 3px 0;
+    }
+    #year-slider{
+        height: 100px;
+        left: 220px;
+        position:absolute;
+        bottom: 30px;
+        width: -webkit-calc(100% - 320px);
+        width:    -moz-calc(100% - 320px);
+        width:         calc(100% - 320px);
+    }
+
+    #type-filter {
+        position:relative;
+        padding: 0px 0px 0px 0px;
+        
+        z-index: 5;
+    }
+    #year-slider p {
+        position: relative;
+        left: 100px;
+        color:#DDD;
+    }
+
+    div.ui-slider {
+        height: 12px;
+        position: relative;
+        left: 100px;
+        width: -webkit-calc(100% - 100px);
+        width:    -moz-calc(100% - 100px);
+        width:         calc(100% - 100px);
+        margin: .5em 0;
+        padding: 0;
+        bottom: 0px;
+    }
+
+    div.ui-slider-range {
+        background: #0087ff;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: #444;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    
+    .sidebar {
+        position: absolute;
+        top: 0px;
+        width: 220px;
+        height: 100%;
+        top: 0px;
+        left: 0;
+        overflow: hidden;
+        border-right: 1px solid rgba(0, 0, 0, 0.25);
+    }
+    .heading {
+        position: absolute;
+        top: 0px;
+        align-content: center;
+        background: #EEEEEE;
+        border-bottom: 1px solid #CCCCCC;
+        height: 270px;
+        line-height: 10px;
+        padding: 0 10px 10px 20px;
+    }
+
+    .heading h1{
+        font-size: 20px;
+        font-family:sans-serif;
+        font-weight: 700;
+    }
+
+    .heading{
+        color: #0062b8;
+    }
+    .btn {
+        margin-top: 10px;
+        background-color: #0088FF;
+    }
+    #details {
+        background: #FFFFFF;
+    }
+
+    #filter {
+        width: 90%;
+    }
+
+    #btn-other{
+        position: absolute;
+        left: 230px;
+        top: 100px;
+        background-color: #AAAAAA;
+        width: 150px;
+    }
+
+    #btn-hdcc{
+        position: absolute;
+        left: 230px;
+        top: 140px;
+        background-color: #0088FF;
+        width: 150px;
+    }
+
+    .listings {
+        position: relative;
+        top: 270px;
+        height: -webkit-calc(100% - 270px);
+        height:    -moz-calc(100% - 270px);
+        height:         calc(100% - 270px);
+        overflow: auto;
+        padding-bottom: 60px;
+    }
+
+    .listings .item {
+        display: block;
+        border-bottom: 1px solid #DDD;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+
+    .listings .item:last-child { border-bottom: none; }
+
+    .listings .item .title {
+        display: block;
+        color:  #0062b8;
+        font-weight: 700;
+    }
+
+    .listings .item .title small { font-weight: 200; }
+    .listings div {
+        background: #FFF;
+        border-color: #333;
+        border-bottom: 8px;
+    }
+    .listings .item.active .title,
+    .listings .item .title:hover { color: #56afff; }
+
+    .listings .item.active {
+        background-color: #DDD;
+    }
+   
+    ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        border-left: 0;
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    ::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #0087ff;
+        border-radius: 0;
+    }
+
+    .clearfix { display: block; }
+
+    .clearfix::after {
+        content: '.';
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+   
+    h4 {
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba(0,0, 0, 0.05);
+        margin: 0;
+        padding: 16px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+    }
+    
+    dd {
+        margin-left: 0;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+      
+      
+    .mapboxgl-popup-content{
+        background: rgba(40, 40, 40, 0.9);
+        font-size: 14px;
+        color: rgba(255, 255, 255, 1);
+        min-width: 250px;
+        max-width: 400px;
+        box-shadow: 0 0 4px 0 rgba(0,0,0,0.1);
+        border-color: #777;
+
+    }
+
+    dl {
+        margin-bottom: 0;
+    }

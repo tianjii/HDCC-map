@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>HDCC Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id='map'></div>
+<button type="button" id='btn-other' class="btn btn-secondary btn-sm" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle Other Bldgs</button>
+<button type="button" id='btn-hdcc' class="btn btn-primary btn-sm" data-toggle="button" aria-pressed="false" autocomplete="off">Toggle HDCC Bldgs</button>
+
+
+<div class = 'sidebar'>
+    <div class='heading'>
+        <h1>HDCC Project<br>Locations</h1>
+        <form id='filter' onkeypress="return event.keyCode != 13">
+            <input type="text" class="form-control" id='searchtext' placeholder="Filter Search">
+        </form>
+        <button type="submit" id='searchbtn' class="btn btn-primary">Search</button>
+        <button type="submit" id='clearbtn' style = "display:none" class="btn btn-primary">X</button>
+        <div id='type-filter'>
+            <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check-civic" onclick="changeVisibleBldg()">
+                    <label class="form-check-label" for="checkCivic">
+                        Civic/Amenity
+                    </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check-commercial" onclick="changeVisibleBldg()">
+                <label class="form-check-label" for="checkComm">
+                        Commercial
+                </label>
+            </div>
+            <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check-hotel" onclick="changeVisibleBldg()">
+                    <label class="form-check-label" for="checkHotel">
+                            Hotel
+                    </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check-residential" onclick="changeVisibleBldg()">
+                <label class="form-check-label" for="checkRes">
+                        Residential
+                </label>
+            </div>
+            
+            <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check-retail" onclick="changeVisibleBldg()">
+                    <label class="form-check-label" for="checkRetail">
+                            Retail
+                    </label>
+            </div>
+        </div>
+    </div>
+    <div id = 'listings' class='listings'></div>
+</div>
+
+
+<div id='year-slider'> 
+    <p>
+	    <label for="amount">Year:  </label>
+	    <input type="text" id="amount" readonly style="border:0; color:#333333; font-weight:bold;">
+    </p>
+    <div id="slider-range"></div>
+</div>
+<script src="mapbox.js"></script>
+
+</body>
+</html>
